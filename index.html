@@ -399,35 +399,55 @@
         };
 
         // Define os caminhos de hotspots para cada grupo, incluindo a questão e a pista para o próximo local.
-        // As questões foram misturadas para cada grupo.
+        // As questões foram misturadas para cada grupo, com 10 questões cada.
         const groupPaths = {
             'A': [
                 { hotspotId: 'laboratorio-histologia', questionId: 'q1_1', hint: 'Sua próxima pista está onde a energia e o esporte se encontram. Procure o local de grandes jogos e treinos: **Ginásio de Esportes**.' }, // Métodos
                 { hotspotId: 'ginasio-esportes', questionId: 'q2_2', hint: 'Agora, dirija-se ao santuário do saber, onde livros e conhecimento se acumulam: a **Biblioteca Central**.' }, // Epitelial
                 { hotspotId: 'biblioteca', questionId: 'q3_3', hint: 'Para a próxima etapa, siga o cheiro de comida fresca e o burburinho dos estudantes famintos: o **Refeitório**.' }, // Conjuntivo
-                { hotspotId: 'refeitorio', questionId: 'q4_4', hint: 'Sua última parada é onde os veículos descansam, um grande espaço coberto para carros: a **Garagem**.' }, // Mista
-                { hotspotId: 'garagem', questionId: 'q5_5', hint: 'Parabéns! Você completou todas as questões do seu grupo.' } // Mista Clínica
+                { hotspotId: 'refeitorio', questionId: 'q4_4', hint: 'Sua próxima pista está onde os veículos descansam, um grande espaço coberto para carros: a **Garagem**.' }, // Mista
+                { hotspotId: 'garagem', questionId: 'q5_5', hint: 'Agora, procure o local onde os lanches e bebidas são vendidos. Siga o aroma de café e salgados: a **Cantina Principal**.' }, // Mista Clínica
+                { hotspotId: 'cantina', questionId: 'q1_6', hint: 'Sua próxima pista é o ponto de acesso principal do campus, onde todos chegam e partem: o **Portão de Entrada do Campus**.' }, // Métodos
+                { hotspotId: 'portao-entrada', questionId: 'q2_7', hint: 'Agora, procure o local onde os professores de enfermagem se reúnem para planejar e discutir: a **Central de Professores da Enfermagem**.' }, // Epitelial
+                { hotspotId: 'central-professores-enfermagem', questionId: 'q3_8', hint: 'Sua próxima pista está no ponto de controle de entrada e saída de veículos de transporte: a **Guarita de Transportes**.' }, // Conjuntivo
+                { hotspotId: 'guarita-transportes', questionId: 'q4_9', hint: 'Sua última questão está no grande salão de eventos e palestras do campus: o **Auditório Central**.' }, // Mista
+                { hotspotId: 'auditorio', questionId: 'q5_10', hint: 'Parabéns! Você completou todas as questões do seu grupo.' } // Mista Clínica
             ],
             'B': [
-                { hotspotId: 'ginasio-esportes', questionId: 'q2_1', hint: 'Sua próxima parada é onde os lanches e bebidas são vendidos. Siga o aroma de café e salgados: a **Cantina Principal**.' }, // Epitelial
+                { hotspotId: 'ginasio-esportes', questionId: 'q2_1', hint: 'Sua próxima pista está onde os lanches e bebidas são vendidos. Siga o aroma de café e salgados: a **Cantina Principal**.' }, // Epitelial
                 { hotspotId: 'cantina', questionId: 'q3_2', hint: 'Para a próxima pista, dirija-se ao ponto de acesso principal do campus, onde todos chegam e partem: o **Portão de Entrada do Campus**.' }, // Conjuntivo
                 { hotspotId: 'portao-entrada', questionId: 'q4_3', hint: 'Agora, procure o local onde os professores de enfermagem se reúnem para planejar e discutir: a **Central de Professores da Enfermagem**.' }, // Mista
-                { hotspotId: 'central-professores-enfermagem', questionId: 'q5_4', hint: 'Sua última questão está no grande salão de eventos e palestras do campus: o **Auditório Central**.' }, // Mista Clínica
-                { hotspotId: 'auditorio', questionId: 'q1_5', hint: 'Parabéns! Você completou todas as questões do seu grupo.' } // Métodos
+                { hotspotId: 'central-professores-enfermagem', questionId: 'q5_4', hint: 'Sua próxima pista está no grande salão de eventos e palestras do campus: o **Auditório Central**.' }, // Mista Clínica
+                { hotspotId: 'auditorio', questionId: 'q1_5', hint: 'Agora, dirija-se ao santuário do saber, onde livros e conhecimento se acumulam: a **Biblioteca Central**.' }, // Métodos
+                { hotspotId: 'biblioteca', questionId: 'q2_6', hint: 'Sua próxima pista está onde as refeições são servidas em grande escala. Siga o fluxo dos estudantes na hora do almoço: o **Refeitório**.' }, // Epitelial
+                { hotspotId: 'refeitorio', questionId: 'q3_7', hint: 'Sua próxima pista está onde os veículos descansam, um grande espaço coberto para carros: a **Garagem**.' }, // Conjuntivo
+                { hotspotId: 'garagem', questionId: 'q4_8', hint: 'Sua próxima pista está no laboratório onde se estuda a estrutura microscópica dos tecidos: o **Laboratório de Histologia**.' }, // Mista
+                { hotspotId: 'laboratorio-histologia', questionId: 'q5_9', hint: 'Sua última questão está no ponto de controle de entrada e saída de veículos de transporte: a **Guarita de Transportes**.' }, // Mista Clínica
+                { hotspotId: 'guarita-transportes', questionId: 'q1_10', hint: 'Parabéns! Você completou todas as questões do seu grupo.' } // Métodos
             ],
             'C': [
                 { hotspotId: 'biblioteca', questionId: 'q3_1', hint: 'Sua próxima pista está onde as refeições são servidas em grande escala. Siga o fluxo dos estudantes na hora do almoço: o **Refeitório**.' }, // Conjuntivo
                 { hotspotId: 'refeitorio', questionId: 'q4_2', hint: 'Agora, dirija-se ao local onde os carros são estacionados, um grande pátio para veículos: a **Garagem**.' }, // Mista
                 { hotspotId: 'garagem', questionId: 'q5_3', hint: 'Para a próxima etapa, procure o ponto de controle de entrada e saída de veículos de transporte: a **Guarita de Transportes**.' }, // Mista Clínica
-                { hotspotId: 'guarita-transportes', questionId: 'q1_4', hint: 'Sua última questão está no laboratório onde se estuda a estrutura microscópica dos tecidos: o **Laboratório de Histologia**.' }, // Métodos
-                { hotspotId: 'laboratorio-histologia', questionId: 'q2_5', hint: 'Parabéns! Você completou todas as questões do seu grupo.' } // Epitelial
+                { hotspotId: 'guarita-transportes', questionId: 'q1_4', hint: 'Sua próxima pista está no laboratório onde se estuda a estrutura microscópica dos tecidos: o **Laboratório de Histologia**.' }, // Métodos
+                { hotspotId: 'laboratorio-histologia', questionId: 'q2_5', hint: 'Agora, procure o local onde a energia e o esporte se encontram. Procure o local de grandes jogos e treinos: **Ginásio de Esportes**.' }, // Epitelial
+                { hotspotId: 'ginasio-esportes', questionId: 'q3_6', hint: 'Sua próxima pista é onde os lanches e bebidas são vendidos. Siga o aroma de café e salgados: a **Cantina Principal**.' }, // Conjuntivo
+                { hotspotId: 'cantina', questionId: 'q4_7', hint: 'Sua próxima pista é o ponto de acesso principal do campus, onde todos chegam e partem: o **Portão de Entrada do Campus**.' }, // Mista
+                { hotspotId: 'portao-entrada', questionId: 'q5_8', hint: 'Agora, procure o local onde os professores de enfermagem se reúnem para planejar e discutir: a **Central de Professores da Enfermagem**.' }, // Mista Clínica
+                { hotspotId: 'central-professores-enfermagem', questionId: 'q1_9', hint: 'Sua última questão está no grande salão de eventos e palestras do campus: o **Auditório Central**.' }, // Métodos
+                { hotspotId: 'auditorio', questionId: 'q2_10', hint: 'Parabéns! Você completou todas as questões do seu grupo.' } // Epitelial
             ],
             'D': [
                 { hotspotId: 'refeitorio', questionId: 'q4_1', hint: 'Sua próxima pista está no principal ponto de entrada e saída do campus, um local de grande movimento: o **Portão de Entrada do Campus**.' }, // Mista
                 { hotspotId: 'portao-entrada', questionId: 'q5_2', hint: 'Agora, dirija-se ao grande salão de eventos e palestras do campus: o **Auditório Central**.' }, // Mista Clínica
                 { hotspotId: 'auditorio', questionId: 'q1_3', hint: 'Para a próxima etapa, siga o cheiro de lanches e o burburinho dos estudantes em busca de um rápido lanche: a **Cantina Principal**.' }, // Métodos
-                { hotspotId: 'cantina', questionId: 'q2_4', hint: 'Sua última questão está no ponto de controle de entrada e saída de veículos de transporte: a **Guarita de Transportes**.' }, // Epitelial
-                { hotspotId: 'guarita-transportes', questionId: 'q3_5', hint: 'Parabéns! Você completou todas as questões do seu grupo.' } // Conjuntivo
+                { hotspotId: 'cantina', questionId: 'q2_4', hint: 'Sua próxima pista está no ponto de controle de entrada e saída de veículos de transporte: a **Guarita de Transportes**.' }, // Epitelial
+                { hotspotId: 'guarita-transportes', questionId: 'q3_5', hint: 'Agora, dirija-se ao santuário do saber, onde livros e conhecimento se acumulam: a **Biblioteca Central**.' }, // Conjuntivo
+                { hotspotId: 'biblioteca', questionId: 'q4_6', hint: 'Sua próxima pista está onde a energia e o esporte se encontram. Procure o local de grandes jogos e treinos: **Ginásio de Esportes**.' }, // Mista
+                { hotspotId: 'ginasio-esportes', questionId: 'q5_7', hint: 'Sua próxima pista está no laboratório onde se estuda a estrutura microscópica dos tecidos: o **Laboratório de Histologia**.' }, // Mista Clínica
+                { hotspotId: 'laboratorio-histologia', questionId: 'q1_8', hint: 'Agora, procure o local onde os professores de enfermagem se reúnem para planejar e discutir: a **Central de Professores da Enfermagem**.' }, // Métodos
+                { hotspotId: 'central-professores-enfermagem', questionId: 'q2_9', hint: 'Sua última questão está onde os veículos descansam, um grande espaço coberto para carros: a **Garagem**.' }, // Epitelial
+                { hotspotId: 'garagem', questionId: 'q3_10', hint: 'Parabéns! Você completou todas as questões do seu grupo.' } // Conjuntivo
             ]
         };
 
